@@ -161,7 +161,7 @@ O BIOME não usa cookies (não é app web). Pode usar identificadores de disposi
 
 ## 12. Alterações nesta Política
 
-Podemos atualizar esta Política para refletir mudanças no Aplicativo ou na legislação. A versão atual estará sempre disponível em **[URL da política, a definir]** e dentro do app em **Configurações → Privacidade**. Alterações relevantes serão comunicadas por aviso no app antes de entrarem em vigor.
+Podemos atualizar esta Política para refletir mudanças no Aplicativo ou na legislação. A versão atual estará sempre disponível em **https://leacam.github.io/biome-site/privacy-policy-pt** e dentro do app em **Configurações → Privacidade**. Alterações relevantes serão comunicadas por aviso no app antes de entrarem em vigor.
 
 ---
 

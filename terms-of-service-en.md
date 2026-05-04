@@ -146,7 +146,7 @@ Provisions that by their nature should survive termination (intellectual propert
 
 ## 14. Changes to Terms
 
-These Terms may be amended at any time. The updated version will be available at **[Terms URL, to be defined]** and inside the app at **Settings → Terms of Service**. Material changes will be notified in the App before taking effect. Continued use after changes implies acceptance.
+These Terms may be amended at any time. The updated version will be available at **https://leacam.github.io/biome-site/terms-of-service-en** and inside the app at **Settings → Terms of Service**. Material changes will be notified in the App before taking effect. Continued use after changes implies acceptance.
 
 ---
 

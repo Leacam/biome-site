@@ -145,7 +145,7 @@ As cláusulas que, por sua natureza, devam sobreviver à rescisão (propriedade 
 
 ## 14. Alterações dos Termos
 
-Estes Termos podem ser alterados a qualquer momento. A versão atualizada estará disponível em **[URL dos termos, a definir]** e dentro do app em **Configurações → Termos de Uso**. Alterações relevantes serão notificadas no app antes de entrarem em vigor. O uso continuado após a alteração implica aceitação.
+Estes Termos podem ser alterados a qualquer momento. A versão atualizada estará disponível em **https://leacam.github.io/biome-site/terms-of-service-pt** e dentro do app em **Configurações → Termos de Uso**. Alterações relevantes serão notificadas no app antes de entrarem em vigor. O uso continuado após a alteração implica aceitação.
 
 ---
 
