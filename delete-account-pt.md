@@ -19,10 +19,11 @@ Esta página descreve como excluir sua conta do aplicativo **BIOME: Merge - Evol
 A exclusão é feita pelo próprio aplicativo, em poucos toques:
 
 1. Abra o jogo **BIOME**.
-2. Toque no ícone de **Opções** (engrenagem) na barra inferior do HUD.
-3. Role até o final da lista de configurações.
-4. Toque em **"Excluir minha conta"**.
-5. Confirme no diálogo de aviso.
+2. Toque no ícone de **Inventário** (mochila) na barra inferior do HUD.
+3. Toque no botão **Config**.
+4. Role até o final da lista de configurações.
+5. Toque em **"Excluir minha conta"**.
+6. Confirme no diálogo de aviso.
 
 A exclusão é **imediata**: o jogo recarrega já com uma conta nova e nenhum vestígio da anterior.
 

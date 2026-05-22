@@ -19,10 +19,11 @@ This page describes how to delete your account in **BIOME: Merge - Evolua - Domi
 Deletion is performed from within the app, in a few taps:
 
 1. Open the **BIOME** game.
-2. Tap the **Settings** icon (gear) on the bottom HUD.
-3. Scroll to the end of the settings list.
-4. Tap **"Delete my account"**.
-5. Confirm in the warning dialog.
+2. Tap the **Inventory** icon (backpack) on the bottom HUD.
+3. Tap the **Config** button.
+4. Scroll to the end of the settings list.
+5. Tap **"Delete my account"**.
+6. Confirm in the warning dialog.
 
 Deletion is **immediate**: the game reloads with a fresh account and no traces of the previous one.
 
