@@ -1,0 +1,878 @@
+{
+ "generatedAt": "2026-10-10T16:20:21+00:00",
+ "weekEndsAt": "2026-10-12T03:00:00+00:00",
+ "eras": {
+  "1": {
+   "general": [
+    {
+     "rank": 1,
+     "name": "Amandiolendario0506",
+     "score": 5111
+    },
+    {
+     "rank": 2,
+     "name": "InvincibleDream166",
+     "score": 4561
+    },
+    {
+     "rank": 3,
+     "name": "Sabrina1010moreira",
+     "score": 3660
+    },
+    {
+     "rank": 4,
+     "name": "PoliteRetiredShoe",
+     "score": 3620
+    },
+    {
+     "rank": 5,
+     "name": "TropicalRotatingRadicchio",
+     "score": 3089
+    },
+    {
+     "rank": 6,
+     "name": "TaxonomicTutor146",
+     "score": 2926
+    },
+    {
+     "rank": 7,
+     "name": "perciyyyy",
+     "score": 2752
+    },
+    {
+     "rank": 8,
+     "name": "GrumpySittingBugle",
+     "score": 2639
+    },
+    {
+     "rank": 9,
+     "name": "FactualAdvocacy39",
+     "score": 2454
+    },
+    {
+     "rank": 10,
+     "name": "WorsePayment104",
+     "score": 2414
+    },
+    {
+     "rank": 11,
+     "name": "SleepyProvenKnight",
+     "score": 2330
+    },
+    {
+     "rank": 12,
+     "name": "SwiftShockingSand",
+     "score": 1845
+    },
+    {
+     "rank": 13,
+     "name": "ExcellentRelievedTuna",
+     "score": 1398
+    },
+    {
+     "rank": 14,
+     "name": "ModernInspection88",
+     "score": 1316
+    },
+    {
+     "rank": 15,
+     "name": "ProminentEncouragingBelt",
+     "score": 862
+    },
+    {
+     "rank": 16,
+     "name": "AltruisticFoldedChinchilla",
+     "score": 685
+    },
+    {
+     "rank": 17,
+     "name": "ElasticStrikingFox",
+     "score": 653
+    },
+    {
+     "rank": 18,
+     "name": "NewInterestingCello",
+     "score": 516
+    },
+    {
+     "rank": 19,
+     "name": "EnjoyableSatisfiedBucket",
+     "score": 468
+    },
+    {
+     "rank": 20,
+     "name": "HullianRabel",
+     "score": 465
+    },
+    {
+     "rank": 21,
+     "name": "CleanDevotedBedbug",
+     "score": 264
+    },
+    {
+     "rank": 22,
+     "name": "QualitativeTime131",
+     "score": 174
+    },
+    {
+     "rank": 23,
+     "name": "ArcticAdaptedParrot",
+     "score": 140
+    },
+    {
+     "rank": 24,
+     "name": "InfiniteAwakingCymbal",
+     "score": 109
+    },
+    {
+     "rank": 25,
+     "name": "GrouchyEnlightenedSkunk",
+     "score": 96
+    },
+    {
+     "rank": 26,
+     "name": "DaintyCoin71836",
+     "score": 77
+    },
+    {
+     "rank": 27,
+     "name": "长U҉訳弋",
+     "score": 65
+    },
+    {
+     "rank": 28,
+     "name": "LarissaFernanda06",
+     "score": 55
+    },
+    {
+     "rank": 29,
+     "name": "DanPuff325",
+     "score": 54
+    },
+    {
+     "rank": 30,
+     "name": "Inaturbo",
+     "score": 53
+    },
+    {
+     "rank": 31,
+     "name": "KeenObservedMoon",
+     "score": 49
+    },
+    {
+     "rank": 32,
+     "name": "YummyDazzledLake",
+     "score": 44
+    },
+    {
+     "rank": 33,
+     "name": "WrathfulDeterminedFridge",
+     "score": 34
+    },
+    {
+     "rank": 34,
+     "name": "HandsomeEntertainedGemstone",
+     "score": 21
+    },
+    {
+     "rank": 35,
+     "name": "CaptivePlunge150",
+     "score": 20
+    },
+    {
+     "rank": 36,
+     "name": "EfficientCloak142",
+     "score": 18
+    },
+    {
+     "rank": 37,
+     "name": "CarefulConfusedVacuum",
+     "score": 18
+    },
+    {
+     "rank": 38,
+     "name": "DearChangingBelt",
+     "score": 17
+    },
+    {
+     "rank": 39,
+     "name": "Dzn071",
+     "score": 16
+    }
+   ],
+   "evolution": [
+    {
+     "rank": 1,
+     "name": "Amandiolendario0506",
+     "score": 24
+    },
+    {
+     "rank": 2,
+     "name": "InvincibleDream166",
+     "score": 24
+    },
+    {
+     "rank": 3,
+     "name": "PoliteRetiredShoe",
+     "score": 17
+    },
+    {
+     "rank": 4,
+     "name": "Sabrina1010moreira",
+     "score": 17
+    },
+    {
+     "rank": 5,
+     "name": "perciyyyy",
+     "score": 13
+    },
+    {
+     "rank": 6,
+     "name": "TaxonomicTutor146",
+     "score": 13
+    },
+    {
+     "rank": 7,
+     "name": "TropicalRotatingRadicchio",
+     "score": 13
+    },
+    {
+     "rank": 8,
+     "name": "GrumpySittingBugle",
+     "score": 11
+    },
+    {
+     "rank": 9,
+     "name": "FactualAdvocacy39",
+     "score": 11
+    },
+    {
+     "rank": 10,
+     "name": "WorsePayment104",
+     "score": 11
+    },
+    {
+     "rank": 11,
+     "name": "SleepyProvenKnight",
+     "score": 10
+    },
+    {
+     "rank": 12,
+     "name": "SwiftShockingSand",
+     "score": 8
+    },
+    {
+     "rank": 13,
+     "name": "ExcellentRelievedTuna",
+     "score": 6
+    },
+    {
+     "rank": 14,
+     "name": "ModernInspection88",
+     "score": 5
+    },
+    {
+     "rank": 15,
+     "name": "ProminentEncouragingBelt",
+     "score": 2
+    },
+    {
+     "rank": 16,
+     "name": "ElasticStrikingFox",
+     "score": 1
+    },
+    {
+     "rank": 17,
+     "name": "EnjoyableSatisfiedBucket",
+     "score": 1
+    },
+    {
+     "rank": 18,
+     "name": "AltruisticFoldedChinchilla",
+     "score": 1
+    },
+    {
+     "rank": 19,
+     "name": "NewInterestingCello",
+     "score": 1
+    },
+    {
+     "rank": 20,
+     "name": "HullianRabel",
+     "score": 1
+    }
+   ],
+   "discovery": [
+    {
+     "rank": 1,
+     "name": "GrumpySittingBugle",
+     "score": 50
+    },
+    {
+     "rank": 2,
+     "name": "perciyyyy",
+     "score": 50
+    },
+    {
+     "rank": 3,
+     "name": "FactualAdvocacy39",
+     "score": 50
+    },
+    {
+     "rank": 4,
+     "name": "PoliteRetiredShoe",
+     "score": 50
+    },
+    {
+     "rank": 5,
+     "name": "Amandiolendario0506",
+     "score": 50
+    },
+    {
+     "rank": 6,
+     "name": "TaxonomicTutor146",
+     "score": 50
+    },
+    {
+     "rank": 7,
+     "name": "TropicalRotatingRadicchio",
+     "score": 50
+    },
+    {
+     "rank": 8,
+     "name": "Sabrina1010moreira",
+     "score": 50
+    },
+    {
+     "rank": 9,
+     "name": "WorsePayment104",
+     "score": 50
+    },
+    {
+     "rank": 10,
+     "name": "SwiftShockingSand",
+     "score": 47
+    },
+    {
+     "rank": 11,
+     "name": "SleepyProvenKnight",
+     "score": 47
+    },
+    {
+     "rank": 12,
+     "name": "ExcellentRelievedTuna",
+     "score": 45
+    },
+    {
+     "rank": 13,
+     "name": "ModernInspection88",
+     "score": 43
+    },
+    {
+     "rank": 14,
+     "name": "ProminentEncouragingBelt",
+     "score": 40
+    },
+    {
+     "rank": 15,
+     "name": "ElasticStrikingFox",
+     "score": 39
+    },
+    {
+     "rank": 16,
+     "name": "AltruisticFoldedChinchilla",
+     "score": 39
+    },
+    {
+     "rank": 17,
+     "name": "NewInterestingCello",
+     "score": 36
+    },
+    {
+     "rank": 18,
+     "name": "EnjoyableSatisfiedBucket",
+     "score": 34
+    },
+    {
+     "rank": 19,
+     "name": "HullianRabel",
+     "score": 33
+    },
+    {
+     "rank": 20,
+     "name": "CleanDevotedBedbug",
+     "score": 27
+    },
+    {
+     "rank": 21,
+     "name": "QualitativeTime131",
+     "score": 25
+    },
+    {
+     "rank": 22,
+     "name": "DaintyCoin71836",
+     "score": 22
+    },
+    {
+     "rank": 23,
+     "name": "ArcticAdaptedParrot",
+     "score": 22
+    },
+    {
+     "rank": 24,
+     "name": "GrouchyEnlightenedSkunk",
+     "score": 20
+    },
+    {
+     "rank": 25,
+     "name": "长U҉訳弋",
+     "score": 18
+    },
+    {
+     "rank": 26,
+     "name": "InfiniteAwakingCymbal",
+     "score": 18
+    },
+    {
+     "rank": 27,
+     "name": "DanPuff325",
+     "score": 16
+    },
+    {
+     "rank": 28,
+     "name": "WrathfulDeterminedFridge",
+     "score": 15
+    },
+    {
+     "rank": 29,
+     "name": "LarissaFernanda06",
+     "score": 15
+    },
+    {
+     "rank": 30,
+     "name": "KeenObservedMoon",
+     "score": 14
+    },
+    {
+     "rank": 31,
+     "name": "Inaturbo",
+     "score": 12
+    },
+    {
+     "rank": 32,
+     "name": "YummyDazzledLake",
+     "score": 12
+    },
+    {
+     "rank": 33,
+     "name": "HandsomeEntertainedGemstone",
+     "score": 10
+    },
+    {
+     "rank": 34,
+     "name": "DearChangingBelt",
+     "score": 9
+    },
+    {
+     "rank": 35,
+     "name": "CaptivePlunge150",
+     "score": 7
+    },
+    {
+     "rank": 36,
+     "name": "EfficientCloak142",
+     "score": 7
+    },
+    {
+     "rank": 37,
+     "name": "CarefulConfusedVacuum",
+     "score": 6
+    },
+    {
+     "rank": 38,
+     "name": "Dzn071",
+     "score": 5
+    },
+    {
+     "rank": 39,
+     "name": "BubblyGivingParsnip",
+     "score": 2
+    },
+    {
+     "rank": 40,
+     "name": "DeservingFact136",
+     "score": 1
+    },
+    {
+     "rank": 41,
+     "name": "heyfutbol",
+     "score": 1
+    },
+    {
+     "rank": 42,
+     "name": "PoliticalEnding138",
+     "score": 1
+    }
+   ],
+   "merge_master": [
+    {
+     "rank": 1,
+     "name": "Amandiolendario0506",
+     "score": 366
+    },
+    {
+     "rank": 2,
+     "name": "InvincibleDream166",
+     "score": 276
+    },
+    {
+     "rank": 3,
+     "name": "Sabrina1010moreira",
+     "score": 263
+    },
+    {
+     "rank": 4,
+     "name": "PoliteRetiredShoe",
+     "score": 256
+    },
+    {
+     "rank": 5,
+     "name": "TropicalRotatingRadicchio",
+     "score": 238
+    },
+    {
+     "rank": 6,
+     "name": "TaxonomicTutor146",
+     "score": 207
+    },
+    {
+     "rank": 7,
+     "name": "perciyyyy",
+     "score": 195
+    },
+    {
+     "rank": 8,
+     "name": "GrumpySittingBugle",
+     "score": 187
+    },
+    {
+     "rank": 9,
+     "name": "WorsePayment104",
+     "score": 184
+    },
+    {
+     "rank": 10,
+     "name": "SleepyProvenKnight",
+     "score": 176
+    },
+    {
+     "rank": 11,
+     "name": "FactualAdvocacy39",
+     "score": 168
+    },
+    {
+     "rank": 12,
+     "name": "SwiftShockingSand",
+     "score": 144
+    },
+    {
+     "rank": 13,
+     "name": "ExcellentRelievedTuna",
+     "score": 108
+    },
+    {
+     "rank": 14,
+     "name": "ModernInspection88",
+     "score": 102
+    },
+    {
+     "rank": 15,
+     "name": "ProminentEncouragingBelt",
+     "score": 85
+    },
+    {
+     "rank": 16,
+     "name": "AltruisticFoldedChinchilla",
+     "score": 82
+    },
+    {
+     "rank": 17,
+     "name": "ElasticStrikingFox",
+     "score": 78
+    },
+    {
+     "rank": 18,
+     "name": "NewInterestingCello",
+     "score": 61
+    },
+    {
+     "rank": 19,
+     "name": "EnjoyableSatisfiedBucket",
+     "score": 55
+    },
+    {
+     "rank": 20,
+     "name": "HullianRabel",
+     "score": 48
+    },
+    {
+     "rank": 21,
+     "name": "CleanDevotedBedbug",
+     "score": 39
+    },
+    {
+     "rank": 22,
+     "name": "QualitativeTime131",
+     "score": 26
+    },
+    {
+     "rank": 23,
+     "name": "ArcticAdaptedParrot",
+     "score": 23
+    },
+    {
+     "rank": 24,
+     "name": "DaintyCoin71836",
+     "score": 17
+    },
+    {
+     "rank": 25,
+     "name": "GrouchyEnlightenedSkunk",
+     "score": 17
+    },
+    {
+     "rank": 26,
+     "name": "InfiniteAwakingCymbal",
+     "score": 16
+    },
+    {
+     "rank": 27,
+     "name": "长U҉訳弋",
+     "score": 13
+    },
+    {
+     "rank": 28,
+     "name": "DanPuff325",
+     "score": 12
+    },
+    {
+     "rank": 29,
+     "name": "LarissaFernanda06",
+     "score": 11
+    },
+    {
+     "rank": 30,
+     "name": "Inaturbo",
+     "score": 9
+    },
+    {
+     "rank": 31,
+     "name": "YummyDazzledLake",
+     "score": 9
+    },
+    {
+     "rank": 32,
+     "name": "KeenObservedMoon",
+     "score": 8
+    },
+    {
+     "rank": 33,
+     "name": "WrathfulDeterminedFridge",
+     "score": 8
+    },
+    {
+     "rank": 34,
+     "name": "CaptivePlunge150",
+     "score": 6
+    },
+    {
+     "rank": 35,
+     "name": "HandsomeEntertainedGemstone",
+     "score": 6
+    },
+    {
+     "rank": 36,
+     "name": "DearChangingBelt",
+     "score": 4
+    },
+    {
+     "rank": 37,
+     "name": "CarefulConfusedVacuum",
+     "score": 4
+    },
+    {
+     "rank": 38,
+     "name": "EfficientCloak142",
+     "score": 3
+    },
+    {
+     "rank": 39,
+     "name": "Dzn071",
+     "score": 3
+    },
+    {
+     "rank": 40,
+     "name": "BubblyGivingParsnip",
+     "score": 1
+    }
+   ]
+  },
+  "2": {
+   "general": [
+    {
+     "rank": 1,
+     "name": "Amandiolendario0506",
+     "score": 45889
+    },
+    {
+     "rank": 2,
+     "name": "TropicalRotatingRadicchio",
+     "score": 11285
+    },
+    {
+     "rank": 3,
+     "name": "HumorousGiant72036",
+     "score": 9830
+    },
+    {
+     "rank": 4,
+     "name": "PoliteRetiredShoe",
+     "score": 7503
+    }
+   ],
+   "merge_master": [
+    {
+     "rank": 1,
+     "name": "Amandiolendario0506",
+     "score": 225
+    },
+    {
+     "rank": 2,
+     "name": "TropicalRotatingRadicchio",
+     "score": 124
+    },
+    {
+     "rank": 3,
+     "name": "PoliteRetiredShoe",
+     "score": 72
+    }
+   ],
+   "producer": [
+    {
+     "rank": 1,
+     "name": "Amandiolendario0506",
+     "score": 13708
+    },
+    {
+     "rank": 2,
+     "name": "TropicalRotatingRadicchio",
+     "score": 4029
+    },
+    {
+     "rank": 3,
+     "name": "HumorousGiant72036",
+     "score": 3336
+    },
+    {
+     "rank": 4,
+     "name": "PoliteRetiredShoe",
+     "score": 3120
+    }
+   ],
+   "pollinator": [
+    {
+     "rank": 1,
+     "name": "Amandiolendario0506",
+     "score": 14931
+    },
+    {
+     "rank": 2,
+     "name": "HumorousGiant72036",
+     "score": 3719
+    },
+    {
+     "rank": 3,
+     "name": "PoliteRetiredShoe",
+     "score": 3175
+    },
+    {
+     "rank": 4,
+     "name": "TropicalRotatingRadicchio",
+     "score": 2925
+    }
+   ],
+   "predator": [
+    {
+     "rank": 1,
+     "name": "Amandiolendario0506",
+     "score": 10586
+    },
+    {
+     "rank": 2,
+     "name": "TropicalRotatingRadicchio",
+     "score": 1521
+    },
+    {
+     "rank": 3,
+     "name": "PoliteRetiredShoe",
+     "score": 382
+    }
+   ],
+   "decomposer": [
+    {
+     "rank": 1,
+     "name": "Amandiolendario0506",
+     "score": 3820
+    },
+    {
+     "rank": 2,
+     "name": "TropicalRotatingRadicchio",
+     "score": 727
+    },
+    {
+     "rank": 3,
+     "name": "PoliteRetiredShoe",
+     "score": 187
+    }
+   ],
+   "herbivore": [
+    {
+     "rank": 1,
+     "name": "Amandiolendario0506",
+     "score": 2643
+    },
+    {
+     "rank": 2,
+     "name": "TropicalRotatingRadicchio",
+     "score": 1980
+    },
+    {
+     "rank": 3,
+     "name": "PoliteRetiredShoe",
+     "score": 582
+    }
+   ]
+  },
+  "3": {
+   "general": [],
+   "merge_master": [],
+   "producer": [],
+   "pollinator": [],
+   "predator": [],
+   "decomposer": [],
+   "herbivore": [],
+   "expedition": [],
+   "city": []
+  },
+  "4": {
+   "general": [],
+   "merge_master": [],
+   "producer": [],
+   "pollinator": [],
+   "predator": [],
+   "decomposer": [],
+   "herbivore": [],
+   "ascension": []
+  }
+ }
+}
