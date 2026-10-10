@@ -140,6 +140,15 @@
   .skeleton{height:52px;border-radius:16px;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.12),rgba(255,255,255,.05));
     background-size:200% 100%;animation:sh 1.2s infinite}
   @keyframes sh{to{background-position:-200% 0}}
+  .sub{align-items:center}
+  .refresh{all:unset;cursor:pointer;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:#06202c;
+    background:linear-gradient(180deg,var(--accent),var(--accent-2));box-shadow:0 0 0 2px rgba(0,0,0,.45),0 0 12px var(--line-soft);
+    -webkit-tap-highlight-color:transparent;transition:transform .15s}
+  .refresh:active{transform:scale(.9)}
+  .refresh svg{width:18px;height:18px}
+  .refresh.spin svg{animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  body.quiet .pod, body.quiet .row{animation:none}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -156,6 +165,7 @@
     <div class="sub">
       <span class="clock" id="clock">—</span>
       <span id="updated"></span>
+      <button class="refresh" id="refresh" aria-label="Atualizar"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.65 6.35A7.95 7.95 0 0 0 12 4a8 8 0 1 0 7.73 10h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z"/></svg></button>
     </div>
 
     <nav class="lenses" id="lenses"></nav>
@@ -293,13 +303,49 @@
     s.style.left = Math.random()*100+"vw"; s.style.animationDuration = 9+Math.random()*12+"s";
     s.style.animationDelay = -Math.random()*20+"s"; const z=2+Math.random()*5; s.style.width=s.style.height=z+"px"; motes.appendChild(s); }
 
+  // Fonte AO VIVO: proxy (Google Apps Script) que lê os leaderboards do UGS com cache de ~1 min.
+  // Vazio ou fora do ar → cai na foto estática data.json.
+  const LIVE_URL = "";
+  const REFRESH_MS = 60000;
+  let loading = false;
+
+  async function fetchData(){
+    if (LIVE_URL){
+      try{
+        const r = await fetch(LIVE_URL + (LIVE_URL.includes("?")?"&":"?") + "t=" + Date.now());
+        const j = await r.json();
+        if (j && j.eras) return j;
+      }catch(e){ /* cai na foto estática */ }
+    }
+    const r = await fetch("data.json?v=" + Date.now());
+    return r.json();
+  }
+
+  async function load(manual){
+    if (loading) return;
+    loading = true; $("refresh").classList.add("spin");
+    try{
+      const j = await fetchData();
+      const first = !data;
+      data = j;
+      if(!era || !data.eras[era]){ era = [1,2,3,4].reduce((b,e)=>playersIn(e)>playersIn(b)?e:b,1); }
+      if(!(data.eras[era]||{})[cat]) cat = "general";
+      document.body.classList.toggle("quiet", !first && !manual); // atualização automática sem re-animar
+      render();
+    }catch(e){
+      if(!data){ langBar(); $("board").innerHTML = `<div class="empty"><img src="img/podium.webp" alt=""><p>${T[lang].err}</p></div>`; }
+    }finally{
+      loading = false;
+      setTimeout(()=>$("refresh").classList.remove("spin"), 500);
+    }
+  }
+
   document.documentElement.lang = LOCALE[lang];
-  fetch("data.json?v="+Date.now()).then(r=>r.json()).then(j=>{
-    data = j;
-    if(!era || !data.eras[era]){ era = [1,2,3,4].reduce((b,e)=>playersIn(e)>playersIn(b)?e:b,1); }
-    if(!(data.eras[era]||{})[cat]) cat = "general";
-    render(); setInterval(tick, 30000);
-  }).catch(()=>{ langBar(); $("board").innerHTML = `<div class="empty"><img src="img/podium.webp" alt=""><p>${T[lang].err}</p></div>`; });
+  $("refresh").onclick = () => load(true);
+  load(false);
+  setInterval(()=>load(false), REFRESH_MS);
+  setInterval(tick, 15000);
+  document.addEventListener("visibilitychange", ()=>{ if(!document.hidden) load(false); });
 })();
 </script>
 </body>
