@@ -148,6 +148,23 @@
   .refresh svg{width:18px;height:18px}
   .refresh.spin svg{animation:spin .8s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
+  /* Esta semana / Semana passada */
+  .weeks{display:flex;justify-content:center;gap:8px;margin:14px 0 0}
+  .weeks button{all:unset;cursor:pointer;font-size:13px;padding:6px 14px;border-radius:999px;color:var(--ink-dim);
+    background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.15);-webkit-tap-highlight-color:transparent}
+  .weeks button.on{color:#06202c;background:var(--accent);border-color:transparent}
+  .final{display:inline-flex;align-items:center;gap:6px}
+  .final::before{content:"🏁"}
+
+  /* Modo print (?shot=1): só o pódio da era, para virar imagem de post */
+  body.shot .lang, body.shot header, body.shot .weeks, body.shot .cats, body.shot .cta, body.shot footer,
+  body.shot .refresh, body.shot .motes{display:none}
+  body.shot .wrap{padding:16px 16px}
+  body.shot .panel{margin-top:0}
+  body.shot .lenses{margin-top:18px}
+  body.shot .podium{margin-top:78px}
+  body.shot .list .row:nth-child(n+3){display:none}
+  body.shot *{animation:none!important;transition:none!important}
   body.quiet .pod, body.quiet .row{animation:none}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -168,6 +185,7 @@
       <button class="refresh" id="refresh" aria-label="Atualizar"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.65 6.35A7.95 7.95 0 0 0 12 4a8 8 0 1 0 7.73 10h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z"/></svg></button>
     </div>
 
+    <nav class="weeks" id="weeks"></nav>
     <nav class="lenses" id="lenses"></nav>
     <div class="cats" id="cats"></div>
 
@@ -196,6 +214,8 @@
         "producer.era3":"Maior Agricultor","pollinator.era3":"Maior Mercador","predator.era3":"Maior Bárbaro","decomposer.era3":"Maior Coletor","herbivore.era3":"Maior Consumidor",
         "producer.era4":"Maior Estrela","herbivore.era4":"Maior Satélite","pollinator.era4":"Maior Ressonante","predator.era4":"Maior Singularidade","decomposer.era4":"Maior Vestígio"},
       emptyT:"O topo está livre!", emptyP:e=>`Ninguém pontuou nesta categoria da era ${e} ainda nesta semana. O primeiro lugar pode ser seu.`,
+      weekNow:"Esta semana", weekPrev:"Semana passada", prevTitle:"Pódio da Semana", final:"Placar final", range:(a,b)=>`${a} a ${b}`,
+      emptyPrev:e=>`Ninguém pontuou nesta categoria da era ${e} na semana passada.`,
       play:"Jogar no Google Play", note:"Ranking semanal de verdade, direto do jogo. Toda virada de domingo para segunda, à meia-noite (Brasília), a disputa recomeça do zero.",
       priv:"Privacidade", terms:"Termos", privUrl:"../privacy-policy-pt", termsUrl:"../terms-of-service-pt", err:"Não deu pra carregar o ranking agora. Tente de novo em instantes.",
       place:["1º","2º","3º"] },
@@ -206,6 +226,8 @@
         "producer.era3":"Top Farmer","pollinator.era3":"Top Merchant","predator.era3":"Top Barbarian","decomposer.era3":"Top Gatherer","herbivore.era3":"Top Consumer",
         "producer.era4":"Biggest Star","herbivore.era4":"Biggest Satellite","pollinator.era4":"Biggest Resonant","predator.era4":"Biggest Singularity","decomposer.era4":"Biggest Remnant"},
       emptyT:"The top is wide open!", emptyP:e=>`No one has scored in this Era ${e} category yet this week. First place could be yours.`,
+      weekNow:"This week", weekPrev:"Last week", prevTitle:"Weekly Podium", final:"Final standings", range:(a,b)=>`${a} – ${b}`,
+      emptyPrev:e=>`No one scored in this Era ${e} category last week.`,
       play:"Play on Google Play", note:"A real weekly ranking, straight from the game. Every Monday 03:00 UTC the race starts over.",
       priv:"Privacy", terms:"Terms", privUrl:"../privacy-policy-en", termsUrl:"../terms-of-service-en", err:"Couldn't load the ranking right now. Try again in a moment.",
       place:["1st","2nd","3rd"] },
@@ -216,6 +238,8 @@
         "producer.era3":"Mayor Agricultor","pollinator.era3":"Mayor Mercader","predator.era3":"Mayor Bárbaro","decomposer.era3":"Mayor Colector","herbivore.era3":"Mayor Consumidor",
         "producer.era4":"Mayor Estrella","herbivore.era4":"Mayor Satélite","pollinator.era4":"Mayor Resonante","predator.era4":"Mayor Singularidad","decomposer.era4":"Mayor Vestigio"},
       emptyT:"¡La cima está libre!", emptyP:e=>`Nadie ha puntuado en esta categoría de la era ${e} esta semana. El primer lugar puede ser tuyo.`,
+      weekNow:"Esta semana", weekPrev:"Semana pasada", prevTitle:"Podio de la Semana", final:"Resultado final", range:(a,b)=>`${a} al ${b}`,
+      emptyPrev:e=>`Nadie puntuó en esta categoría de la era ${e} la semana pasada.`,
       play:"Jugar en Google Play", note:"Ranking semanal real, directo del juego. Cada lunes a las 03:00 UTC la competencia vuelve a empezar.",
       priv:"Privacidad", terms:"Términos", privUrl:"../privacy-policy-en", termsUrl:"../terms-of-service-en", err:"No se pudo cargar el ranking. Inténtalo de nuevo en un momento.",
       place:["1º","2º","3º"] }
@@ -227,12 +251,17 @@
   const nav = (navigator.language||"pt").slice(0,2);
   let lang = qs.get("lang") || (T[nav] ? nav : "pt");
   let data = null, era = +(qs.get("era")||0), cat = qs.get("cat") || "general";
+  // week=prev: placar final congelado da semana anterior (prev.json, gerado na virada a partir do arquivo do UGS).
+  let week = qs.get("week") === "prev" ? "prev" : "now";
   const $ = id => document.getElementById(id);
+  if (qs.get("shot") === "1") document.body.classList.add("shot");
 
   const catLabel = (c,e) => T[lang].cats[`${c}.era${e}`] || T[lang].cats[c] || c;
   const fmt = n => n.toLocaleString(LOCALE[lang]);
   const hash = s => [...s].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7);
   const esc = s => s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  // Nomes longos (HandsomeDazzledPorcupine) quebram entre as palavras, não no meio delas.
+  const nameHtml = s => esc(s).replace(/([a-z])([A-Z0-9])/g, "$1<wbr>$2");
   const playersIn = e => data ? Math.max(0, ...Object.values(data.eras[e]||{}).map(r=>r.length)) : 0;
 
   function langBar(){
@@ -245,7 +274,10 @@
     langBar();
     document.body.dataset.era = era;
     $("bg").style.backgroundImage = `url(img/era${era}_bg.webp)`;
-    $("title").textContent = t.title;
+    $("title").textContent = week === "prev" ? t.prevTitle : t.title;
+    $("refresh").style.display = week === "prev" ? "none" : "";
+    $("weeks").innerHTML = ["now","prev"].map(w=>`<button class="${w===week?"on":""}" data-w="${w}">${w==="now"?t.weekNow:t.weekPrev}</button>`).join("");
+    $("weeks").querySelectorAll("button").forEach(b=>b.onclick=()=>{ if(b.dataset.w!==week){ week=b.dataset.w; load(true); } });
     $("playTxt").textContent = t.play; $("note").textContent = t.note;
     $("lnkPriv").textContent = t.priv; $("lnkPriv").href = t.privUrl;
     $("lnkTerms").textContent = t.terms; $("lnkTerms").href = t.termsUrl;
@@ -265,29 +297,38 @@
 
     const rows = (data.eras[era]||{})[cat] || [];
     if(!rows.length){
-      $("board").innerHTML = `<div class="empty"><img src="img/podium.webp" alt=""><h3>${t.emptyT}</h3><p>${t.emptyP(era)}</p></div>`;
+      $("board").innerHTML = `<div class="empty"><img src="img/podium.webp" alt=""><h3>${t.emptyT}</h3><p>${week==="prev"?t.emptyPrev(era):t.emptyP(era)}</p></div>`;
     } else {
       const medal = ["gold","silver","bronze"], order = [1,0,2];
       const pod = order.filter(i=>rows[i]).map(i=>{
         const r = rows[i];
         return `<div class="pod p${i+1}" style="grid-column:${order.indexOf(i)+1}">
           ${i===0?'<div class="crown">👑</div>':""}<img class="medal" src="img/medal_${medal[i]}.webp" alt="">
-          <div class="nm">${esc(r.name)}</div><div class="sc">${fmt(r.score)}</div><div class="rk">${t.place[i]}</div></div>`;
+          <div class="nm">${nameHtml(r.name)}</div><div class="sc">${fmt(r.score)}</div><div class="rk">${t.place[i]}</div></div>`;
       }).join("");
       const rest = rows.slice(3).map((r,k)=>{
         const c = AV[hash(r.name)%AV.length];
         return `<div class="row" style="animation-delay:${Math.min(k,12)*25}ms"><div class="pos">${r.rank}</div>
           <div class="av" style="background:${c}">${esc(r.name[0].toUpperCase())}</div>
-          <div class="nm">${esc(r.name)}</div><div class="sc">${fmt(r.score)}</div></div>`;
+          <div class="nm">${nameHtml(r.name)}</div><div class="sc">${fmt(r.score)}</div></div>`;
       }).join("");
       $("board").innerHTML = `<div class="podium">${pod}</div>${rest?`<div class="list">${rest}</div>`:""}`;
     }
-    const u = new URL(location); u.searchParams.set("era",era); u.searchParams.set("cat",cat); history.replaceState(null,"",u);
+    const u = new URL(location); u.searchParams.set("era",era); u.searchParams.set("cat",cat);
+    if (week === "prev") u.searchParams.set("week","prev"); else u.searchParams.delete("week");
+    history.replaceState(null,"",u);
   }
 
   function tick(){
     if(!data) return;
     const t = T[lang];
+    if (week === "prev") {
+      const day = d => new Date(d).toLocaleDateString(LOCALE[lang], {day:"2-digit", month:"2-digit", timeZone:"America/Sao_Paulo"});
+      $("clock").className = "final"; $("clock").textContent = t.final;
+      $("updated").textContent = t.range(day(data.weekStart), day(new Date(data.weekEnd) - 6e4));
+      return;
+    }
+    $("clock").className = "clock";
     let ms = new Date(data.weekEndsAt) - Date.now();
     if (ms < 0) ms = 0;
     const d = Math.floor(ms/864e5), h = Math.floor(ms%864e5/36e5), m = Math.floor(ms%36e5/6e4);
@@ -310,6 +351,7 @@
   let loading = false;
 
   async function fetchData(){
+    if (week === "prev") return (await fetch("prev.json?v=" + Date.now())).json();
     if (LIVE_URL){
       try{
         const r = await fetch(LIVE_URL + (LIVE_URL.includes("?")?"&":"?") + "t=" + Date.now());
@@ -343,9 +385,9 @@
   document.documentElement.lang = LOCALE[lang];
   $("refresh").onclick = () => load(true);
   load(false);
-  setInterval(()=>load(false), REFRESH_MS);
+  setInterval(()=>{ if (week === "now") load(false); }, REFRESH_MS);   // semana passada não muda
   setInterval(tick, 15000);
-  document.addEventListener("visibilitychange", ()=>{ if(!document.hidden) load(false); });
+  document.addEventListener("visibilitychange", ()=>{ if(!document.hidden && week === "now") load(false); });
 })();
 </script>
 </body>
