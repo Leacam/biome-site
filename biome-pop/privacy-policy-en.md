@@ -1,11 +1,11 @@
-# Privacy Policy — BIOME Pop
+# Privacy Policy — Biome Pop
 
 **Last updated:** October 20, 2026
 **Effective:** from the moment the app is downloaded
 
-This Privacy Policy describes how the **BIOME Pop** app ("App", "Game") handles user information ("you"), in accordance with Brazil's **General Data Protection Law — LGPD (Law No. 13,709/2018)**, the **Brazilian Internet Civil Framework (Law No. 12,965/2014)** and, where applicable, the **EU General Data Protection Regulation — GDPR (EU 2016/679)**.
+This Privacy Policy describes how the **Biome Pop** app ("App", "Game") handles user information ("you"), in accordance with Brazil's **General Data Protection Law — LGPD (Law No. 13,709/2018)**, the **Brazilian Internet Civil Framework (Law No. 12,965/2014)** and, where applicable, the **EU General Data Protection Regulation — GDPR (EU 2016/679)**.
 
-By installing or using BIOME Pop, you confirm that you have read and agree to this Policy. If you do not agree, please do not use the App.
+By installing or using Biome Pop, you confirm that you have read and agree to this Policy. If you do not agree, please do not use the App.
 
 ---
 
@@ -23,7 +23,7 @@ The Controller also acts as the **Data Protection Officer (DPO)** under art. 41 
 
 ## 2. Data We Collect
 
-BIOME Pop is designed to work **without collecting personal data**. There is no sign-up or account of our own, **no ads** and **no analytics**: the game does not send usage data to our servers.
+Biome Pop is designed to work **without collecting personal data**. There is no sign-up or account of our own, **no ads** and **no analytics**: the game does not send usage data to our servers.
 
 ### 2.1 What stays on your device
 
@@ -107,7 +107,7 @@ You can also delete your data at any time: uninstalling the app deletes the data
 
 ## 9. Children
 
-BIOME Pop is intended for **users aged 13 and over**. We do not knowingly collect data from children under 13. Parents or guardians with any questions can contact us at the email above.
+Biome Pop is intended for **users aged 13 and over**. We do not knowingly collect data from children under 13. Parents or guardians with any questions can contact us at the email above.
 
 This section complies with **art. 14 of the LGPD** and **COPPA** (US Children's Online Privacy Protection Act).
 

@@ -1,11 +1,11 @@
-# Política de Privacidade — BIOME Pop
+# Política de Privacidade — Biome Pop
 
 **Última atualização:** 20 de outubro de 2026
 **Vigência:** a partir do download do aplicativo
 
-Esta Política de Privacidade descreve como o aplicativo **BIOME Pop** ("Aplicativo", "Jogo") trata as informações dos usuários ("você", "Titular"), em conformidade com a **Lei Geral de Proteção de Dados Pessoais — LGPD (Lei nº 13.709/2018)**, com o **Marco Civil da Internet (Lei nº 12.965/2014)** e, quando aplicável, com o **Regulamento Geral de Proteção de Dados — GDPR (UE 2016/679)**.
+Esta Política de Privacidade descreve como o aplicativo **Biome Pop** ("Aplicativo", "Jogo") trata as informações dos usuários ("você", "Titular"), em conformidade com a **Lei Geral de Proteção de Dados Pessoais — LGPD (Lei nº 13.709/2018)**, com o **Marco Civil da Internet (Lei nº 12.965/2014)** e, quando aplicável, com o **Regulamento Geral de Proteção de Dados — GDPR (UE 2016/679)**.
 
-Ao instalar ou usar o BIOME Pop, você declara ter lido e concordado com esta Política. Se não concordar, não use o Aplicativo.
+Ao instalar ou usar o Biome Pop, você declara ter lido e concordado com esta Política. Se não concordar, não use o Aplicativo.
 
 ---
 
@@ -23,7 +23,7 @@ Este Controlador acumula a função de **Encarregado pelo Tratamento de Dados Pe
 
 ## 2. Dados que Coletamos
 
-O BIOME Pop foi feito para funcionar **sem coletar dados pessoais**. Não há cadastro nem login próprio, **não há anúncios** e **não há analytics**: o jogo não envia dados de uso para servidores nossos.
+O Biome Pop foi feito para funcionar **sem coletar dados pessoais**. Não há cadastro nem login próprio, **não há anúncios** e **não há analytics**: o jogo não envia dados de uso para servidores nossos.
 
 ### 2.1 O que fica no seu dispositivo
 
@@ -107,7 +107,7 @@ Você também pode apagar os seus dados a qualquer momento: desinstalar o aplica
 
 ## 9. Crianças e Adolescentes
 
-O BIOME Pop é destinado a **maiores de 13 anos**. Não coletamos conscientemente dados de crianças menores de 13 anos. Pais ou responsáveis com qualquer dúvida podem entrar em contato pelo email acima.
+O Biome Pop é destinado a **maiores de 13 anos**. Não coletamos conscientemente dados de crianças menores de 13 anos. Pais ou responsáveis com qualquer dúvida podem entrar em contato pelo email acima.
 
 Esta seção atende ao **art. 14 da LGPD** e à **COPPA** (EUA, Children's Online Privacy Protection Act).
 
